@@ -1,0 +1,317 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Liberator boon calculator</title>
+    <style type="text/css">
+
+    body {
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    #topbar {
+         position:fixed;
+         top:0;
+         width:100%;
+         height: 30px;
+
+         font-size: 16;
+         font-weight: bold;
+
+         background-color: #e5eeff;
+         display:block;
+         z-index: 2;
+    }
+
+    #footer {
+      margin-top:30px;
+      z-index: 1;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    td.req {
+      padding-left: 10px;
+    }
+  </style>
+
+<script>
+     function checkboxes()
+      {
+        var one_point = document.querySelectorAll('input[name="one"]:checked').length;
+        var two_points = document.querySelectorAll('input[name="two"]:checked').length;
+
+        var total_cost = one_point + two_points * 2;
+
+        if (total_cost > 0) {
+          var cost = document.getElementById('topbar');
+          cost.innerHTML = "Liberator Boon Calculator | cost: " + total_cost;
+        } else {
+          var cost = document.getElementById('topbar');
+          cost.innerHTML = "Liberator Boon Calculator";
+        }
+      }
+</script>
+
+</head>
+
+<body>
+
+<div id="topbar">
+  Liberator Boon Calculator
+</div>
+<div id="footer">
+<table>
+  <tr>
+    <td>armoursmith</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are better at creating ghost armours.</td>
+  </tr>
+  <tr>
+    <td class="req">master armoursmith</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are even better at creating ghost armours. Requires armoursmith.</td>
+  </tr>
+  <tr>
+    <td class="req">grandmaster armoursmith</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You have mastered the art of ghost armours. Requires master armoursmith.</td>
+  </tr>
+  <tr>
+    <td>blessed aim</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are better at scoring a hit with radiant slash or ghost slash.</td>
+  </tr>
+  <tr>
+    <td>chiller</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are connected to the ethereal chill. Your ghost chill lasts longer and is more effective.
+You are connected to the ethereal chill. Your ghost chill lasts longer and is more effective.</td>
+  </tr>
+  <tr>
+    <td>debatable morals</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are adept at explaining why you kill good things.</td>
+  </tr>
+  <tr>
+    <td class="req">dubious morals</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You have mastered the art of explaining why you kill good things. Requires debatable morals.</td>
+  </tr>
+  <tr>
+    <td>detective</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You can use the 'liberator detect' command even without the required spell percentage.</td>
+  </tr>
+  <tr>
+    <td>divine strike (2)</td>
+    <td><input type="checkbox" name="two" onClick="checkboxes()" /></td>
+    <td>You are blessed with great luck. You can score an automatic critical hit with radiant slash or ghost slash against a monster. You can call for the critical hit with 'liberator crit' command.</td>
+  </tr>
+  <tr>
+    <td class="req">improved divine strike</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You can call for a critical hit more often. Requires divine strike.</td>
+  </tr>
+  <tr>
+    <td>elemental ghost slash</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are adept at dealing elemental damage with ghost slash.</td>
+  </tr>
+  <tr>
+    <td class="req">master elemental ghost slash (2)</td>
+    <td><input type="checkbox" name="two" onClick="checkboxes()" /></td>
+    <td>You are master at dealing elemental damage with ghost slash. Requires elemental ghost slash.</td>
+  </tr>
+  <tr>
+    <td class="req">grandmaster elemental ghost slash</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You have mastered the art of dealing elemental damage with ghost slash. Requires master elemental ghost slash.</td>
+  </tr>
+  <tr>
+    <td>ether connection</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You gain more endurance from ghost link.</td>
+  </tr>
+  <tr>
+    <td class="req">mastery of ether (2)</td>
+    <td><input type="checkbox" name="two" onClick="checkboxes()" /></td>
+    <td>You gain even more endurance from ghost link. Requires ether connection.</td>
+  </tr>
+  <tr>
+    <td class="req">grandmastery of ether</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You gain still more endurance from ghost link. Requires mastery of ether.</td>
+  </tr>
+  <tr>
+    <td>fast channeling</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are capable of channeling the ghost faster than usual.</td>
+  </tr>
+  <tr>
+    <td class="req">ease channeling</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are capable of channeling the ghost with less endurance. Requires fast channeling.</td>
+  </tr>
+  <tr>
+    <td>general</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are natural born military commander. You can hit multiple targets easier with ghost army assault, and score critical hits more often.</td>
+  </tr>
+  <tr>
+    <td class="req">fast decisions (2)</td>
+    <td><input type="checkbox" name="two" onClick="checkboxes()" /></td>
+    <td>You are faster to channel the ghost army assault. Requires general.</td>
+  </tr>
+  <tr>
+    <td class="req">hard decisions</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You can channel ghost army assault with more damage. Requires general.</td>
+  </tr>
+  <tr>
+    <td>ghost mastery</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You gain better ghosts.</td>
+  </tr>
+  <tr>
+    <td class="req">ghost grandmastery (2)</td>
+    <td><input type="checkbox" name="two" onClick="checkboxes()" /></td>
+    <td>You gain even better ghosts. Requires ghost mastery.</td>
+  </tr>
+  <tr>
+    <td>ghost senses</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>Your ghost vision affects all your senses.</td>
+  </tr>
+  <tr>
+    <td>headbasher</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are adept at breaking your opponent's concentration with ghost slash.</td>
+  </tr>
+  <tr>
+    <td class="req">master headbasher (2)</td>
+    <td><input type="checkbox" name="two" onClick="checkboxes()" /></td>
+    <td>ou are master at breaking your opponent's concentration with ghost slash. Requires headbasher.</td>
+  </tr>
+  <tr>
+    <td class="req">grandmaster headbasher</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You have mastered the art of breaking your opponent's concentration with ghost slash. Requires master headbasher.</td>
+  </tr>
+  <tr>
+    <td>hidden radiance</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are blessed with hidden radiance and your radiant slash benefits more from light.</td>
+  </tr>
+  <tr>
+    <td class="req">inner glow</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are blessed with inner glow and you can use radiant slash even in pitch black darkness. Requires hidden radiance.</td>
+  </tr>
+  <tr>
+    <td>keen eyesight</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are better at detecting evil.</td>
+  </tr>
+  <tr>
+    <td>lucky slash</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are more likely to score a critical with offensive skills ghost slash and radiant slash</td>
+  </tr>
+  <tr>
+    <td class="req">truly lucky slash</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are even more likely to score a critical with ghost slash and radiant slash. Requires lucky slash.</td>
+  </tr>
+  <tr>
+    <td>mastery of ghost slash</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are adept at dealing more damage with ghost slash.</td>
+  </tr>
+  <tr>
+    <td class="req">grandmastery of ghost slash </td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are even better at dealing damage with ghost slash. Requires mastery of ghost slash.</td>
+  </tr>
+  <tr>
+    <td>mastery of light</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You have mastered ghost light spell and it is faster to cast.</td>
+  </tr>
+  <tr>
+    <td class="req">grandmastery of light</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You can cast ghost light even faster. Requires mastery of light.</td>
+  </tr>
+  <tr>
+    <td>negotiator</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are better at appeasing ghosts.</td>
+  </tr>
+  <tr>
+    <td>releaser</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You have mastered the art of releasing ghosts.</td>
+  </tr>
+  <tr>
+    <td class="req">master releaser</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You have truly mastered the art of releasing ghosts. Requires releaser.</td>
+  </tr>
+  <tr>
+    <td>soothing songs</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You have mastered the art of restful sleep.</td>
+  </tr>
+  <tr>
+    <td>swordsmith</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are better than average at creating swords.</td>
+  </tr>
+  <tr>
+    <td class="req">master swordsmith</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You are even better at creating swords. Requires swordsmith.</td>
+  </tr>
+  <tr>
+    <td class="req">grandmaster swordsmith</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>You have mastered the art of ghost swords. Requires master swordsmith.</td>
+  </tr>
+  <tr>
+    <td>trustworthy</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>Your ghost companions find you more trustworthy.</td>
+  </tr>
+  <tr>
+    <td class="req">truly trustworthy</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>Your ghost companions are stronger. Requires trustworthy.</td>
+  </tr>
+  <tr>
+    <td class="req">lingering companion</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>Your ghost companions stay longer. Requires trustworthy.</td>
+  </tr>
+  <tr>
+    <td>combat damage analyst</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>Your ghost slash analysis is better.</td>
+  </tr>
+  <tr>
+    <td class="req">master combat damage analyst</td>
+    <td><input type="checkbox" name="one" onClick="checkboxes()" /></td>
+    <td>Your ghost slash analysis skills are at peak level. Requires combat damage analyst.</td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
