@@ -1,0 +1,109 @@
+ivory+coral+bone=dragonscale
+
+
+Chest hull desc
+---------------
+It looks totally incomplete.
+The basic structure is forming up.
+It slightly resembles a chest.
+It is missing a lid.
+It is still quite shaky.
+It looks like a small chest but it could be so much more.
+It does not look quite safe yet.
+The base looks strong now, but the lid is still quite weak.
+The chest is looking much larger.
+The construction looks bigger and bigger.
+The structure is now stronger than ever before.
+The chest looks big enough to hold out several equipments.
+The extra material has made the chest almost impossible to breach.
+The chest construction looks quite large and safe.
+The extra material in support-structure guarantees quality.
+The chest looks just perfect and there is very little unfinished.
+The construction looks very big and sturdy.
+
+Chest reinforcement desc
+------------------------
+The reinforcement looks totally incomplete
+The reinforcement is still quite weak.
+The structure looks much stronger because of the reinforcement.
+The reinforcement still lacks quality.
+The reinforcement looks fine but it could be improved.
+The reinforced chest looks quite sturdy now.
+It would be a pain to force through the reinforcements.
+Just a final touch and the reinforcement is fully complete.
+
+Chest lock desc
+---------------
+The lock looks totally imcomplete.
+It slightly resembles a chest lock but much needs to be done.
+The basic structure is forming up quite nicely.
+The inner structure looks almost completed.
+The lock still lacks all the rolls.
+The lock looks somewhat ready.
+It looks like a primary lock but it could be so much more.
+The extra material in mechanism should pay off.
+The lock looks very complicated.
+It looks very strong, almost impossible to break.
+The mechanism is now stronger than before.
+The quality of lock is very high but dials could be more sturdy.
+The lock looks extremely strong and supreme quality.
+The lock looks incredibly strong and of divine quality.
+
+Chest trap desc
+---------------
+The trap is forming up.
+The outer structure looks strong enough.
+The mechanism looks somewhat trimmed.
+The structure is now sturdy but small in size.
+The triggering device looks sophisticated.
+It looks like a basic trap but it could be so much more.
+It is a clever and nasty looking trap.
+The trap is complex and more protected against disarming.
+It looks very small yet lethal machine.
+It is an awesome trap but it could be superb.
+It is a superb trap by your standards.
+
+Thanks Ordos
+
+EQ Max cond messages
+--------------------
+awesome     brand new
+superb      as good as new
+incredible  used just a few times
+excellent   has some small repairs
+great       has some minor  fixes
+good        been fixed a few times
+fine        been fixed several times
+battered    patched up a few times
+poor        patched up several times
+
+Thanks Taras
+
+Gem materials and adjectives
+----------------------------
+Materials:
+1 - amethyst, olivine, rhodonite, turquoise, zircon, amber, moonstone.
+2 - alexandrite, carnelian, chrysoberyl, malachite, moss agate, opal, quartz, sunstone, topaz
+3 - aquamarine
+4 - garnet, onyx
+5 - bloodstone, jade
+6 - pearl
+7 - sapphire
+8 - ruby
+10 - diamond, emerald
+
+Adjectives:
+1 - cracked, flawed, shoddy, tiny
+2 - chipped, dull, smal
+3 - polished, shiny
+4 - lovely
+5 - gleaming, sparkling
+6 - beautiful
+7 - large
+8 - magnificent
+9 - flawless
+10 - perfect
+
+Thanks Atheorist?
+
+
