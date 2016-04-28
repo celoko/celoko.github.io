@@ -2,6 +2,8 @@ Potion research stats
 ---------------------
 2147 tests, 2147 organs and herbs
 28 work days in 2 months
+Got 1613 herbs with create herb
+
 
  Material usage
 ------------------------
