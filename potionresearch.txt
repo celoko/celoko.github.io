@@ -1,0 +1,154 @@
+Potion research stats
+---------------------
+2147 tests, 2147 organs and herbs
+28 work days in 2 months
+
+ Material usage
+------------------------
+ anipium         32.0 kg
+ cobalt          29.0 kg
+ illumium        28.5 kg
+ zhentorium      26.5 kg
+ silicon         25.5 kg
+ adamantium      25.0 kg
+ lead            24.5 kg
+ kryptonite      24.5 kg
+ aluminium       24.5 kg
+ mithril         24.0 kg
+ brass           23.0 kg
+ hematite        22.5 kg
+ graphite        22.5 kg
+ uranium         22.0 kg
+ diggalite       22.0 kg
+ tin             21.5 kg
+ osmium          21.0 kg
+ mowglite        21.0 kg
+ magnesium       21.0 kg
+ iron            21.0 kg
+ electrum        21.0 kg
+ steel           20.5 kg
+ silver          20.5 kg
+ potassium       20.0 kg
+ indium          20.0 kg
+ bronze          20.0 kg
+ zinc            19.5 kg
+ tungsten        19.5 kg
+ nickel          19.5 kg
+ iridium         19.5 kg
+ cesium          19.0 kg
+ pyrite          18.5 kg
+ highsteel       18.5 kg
+ chromium        18.5 kg
+ rhodium         18.0 kg
+ pewter          18.0 kg
+ palladium       18.0 kg
+ mowgles         18.0 kg
+ copper          18.0 kg
+ molybdenum      17.5 kg
+ batium          17.5 kg
+ tormium         17.0 kg
+ titanium        17.0 kg
+ nullium         17.0 kg
+ vanadium        16.5 kg
+ tadmium         16.5 kg
+ durandium       16.5 kg
+ gold            16.0 kg
+ darksteel       15.5 kg
+ quicksilver     14.5 kg
+ dukonium        13.5 kg
+ platinum        13.0 kg
+ starmetal       12.5 kg
+ duraluminium     7.0 kg
+-------------------------
+               1073.5 kg
+
+ Organs
+-------------------------
+    133 bladder
+    126 eye
+    121 snout
+    119 heart
+    117 lung
+    112 ear
+    105 antenna
+    102 arm
+    101 paw
+     99 wing
+     99 liver
+     92 nose
+     90 tail
+     85 foot
+     80 horn
+     77 gill
+     76 stomach
+     72 tendril
+     72 spleen
+     72 kidney
+     69 brain
+     65 beak
+     63 leg
+-----------------------
+
+
+ Herbs
+-----------------------
+     84 garlic
+     74 plum
+     73 cotton
+     70 blueberry
+     69 raspberry
+     68 apple
+     63 turnip
+     59 yarrow
+     59 tomato
+     59 lobelia
+     56 mushroom
+     56 lettuce
+     54 strawberry
+     53 spinach
+     53 potato
+     52 carrot
+     51 vine_seed
+     48 nightshade
+     48 honeysuckle
+     48 elder
+     44 mistletoe
+     43 rhubarb
+     43 lungwort
+     42 borage
+     41 pear
+     40 ginseng
+     39 holly
+     37 jimsonweed
+     37 costmary
+     36 hcliz
+     35 foxglove
+     35 arnica
+     34 chickweed
+     33 water_lily
+     31 onion
+     30 cauliflower
+     29 cabbage
+     27 thistle
+     26 henbane
+     25 chicory
+     24 hemlock
+     24 crystalline
+     22 barberry
+     18 moss
+     18 mangrel
+     17 burdock
+     15 wormwood
+     14 sweetflag
+     14 comfrey
+     13 soapwort
+     12 mandrake
+     12 jaslah
+     11 bloodroot
+     10 boneset
+      9 mugwort
+      5 wolfbane
+      5 mysticspinach
+----------------------
+
+
