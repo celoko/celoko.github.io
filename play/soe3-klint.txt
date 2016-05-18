@@ -1,0 +1,63 @@
+cr theero;emote steps up to the stand.
+say As you know, Arelium city has seen many orc attacks lately
+say women and children are afraid to go outside and crime rates are up.
+say To resolve this, we must form a safety patrol to make the streets safe again.
+cr theero;say This is exactly why we need safety patrol.
+say You can't even fight at Damogran, but that is no reason to think that this attack didn't happen.
+say In fact, it only strengthens the idea that all orcs are criminals.
+cr audience;emote cheers more.
+cr theero;say Yes, ok, so this group needs a name and our officer Thiero is responsible for that.
+emote claps as Thiero walks to the front.
+cr theero;say Hrii what? Thats not even our language? Why would we take that name?
+cr theero;say Whats elune?
+cr theero;shout So why would we take that stupid name?
+cr theero;emote sighs deeply
+say Ok, so we are Hrii of Elune.
+cr theero;say Even that would have been better.
+emote shakes his head.
+say Whatever..
+say If you all have time, we could do a little walk right now?
+cr audience;emote start to nod in approving manner.
+cr theero;say We could walk to central square and then to south crossing.
+cr theero;say Sure, we can visit orphans and then walk to central square and finally to south crossing.
+cr theero;emote wiggles his bottom.
+say Ok guys, I mean soldiers, lets make a line with three men in row.
+cr men;emote bump into eath other until they form acceptable 3x3 formation.
+cr guards;emote watch as group leaves toward the orphanarium.
+cr theero;emote breaths heavily.
+say But its hard work, I ain't cut for this walking thing.
+cr theero;say Let's continue to central square.
+cr central;emote square is full of people, they seem angry.
+cr as;emote patrol arrives, people start to shout at them.
+cr somebody;shout There they are!
+emote shouts "Bandits!" and shakes his fist.
+cr theero;say Whoa, whoa! We ain't no bandits, we are the um.. safety patrol.
+cr somebody;shout You've been killing Arelium citizens every other day.
+cr theero;emote scratches his ear.
+say Well, I don't think it's that often..
+shout Why are you accusing us? Real threat is those god damn ORCS!"
+cr theero;say That did not go well.
+cr lorc;emote orc walks out from the forest.
+emote orc shouts 'I HAVE FRENZY ON TRY TO AVOID ME!'
+cr horc;emote orc says 'Postakaite kripov v lesu.'
+cr theero;say Thiero, did you get that?
+cr horc;emote orc says 'Rasslabtes, vse normalno.'
+cr lorc;emote orc says 'Udachi.'
+cr oarcher;emote archer fires burning arrow that hits Teerhhi in the head.
+cr theero;shout Shit!
+shout I killed three orcs.
+say But, they killed many of our men.
+cr twoorcs;emote orcs surround Teerho and hack him to pieces.
+cr theero;emote runs toward orcs and jump-kicks Hairy orc to the ground.
+emote swings his sword and cuts Hairy orcs head off.
+cr forc;emote orc slashes Theero in the back and he falls down.
+cr theero;say Did you get them?
+cr theero;say I don't feel so good.
+cr there;emote is big open wound in his back.
+cr arelium;emote Central Square, Laenor.
+cr you;emote guess it's around 10 o'clock.
+cr citizen3;say It's been very peaceful since we kicked those bandits out.
+cr shopkeeper;say Yeah, and orc attacks stopped.
+cr citizen3;say I heard there is bunch of corpses down at the South Crossing.
+cr shopkeeper;say Good, bloodthirsty assholes should fight each other and leave us alone.
+cr the;emote end
