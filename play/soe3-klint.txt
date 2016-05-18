@@ -9,7 +9,7 @@ cr audience;emote cheers more.
 cr theero;say Yes, ok, so this group needs a name and our officer Thiero is responsible for that.
 emote claps as Thiero walks to the front.
 cr theero;say Hrii what? Thats not even our language? Why would we take that name?
-cr theero;say Whats elune?
+cr theero;say Whats Elune?
 cr theero;shout So why would we take that stupid name?
 cr theero;emote sighs deeply
 say Ok, so we are Hrii of Elune.
@@ -19,7 +19,7 @@ say Whatever..
 say If you all have time, we could do a little walk right now?
 cr audience;emote start to nod in approving manner.
 cr theero;say We could walk to central square and then to south crossing.
-cr theero;say Sure, we can visit orphans and then walk to central square and finally to south crossing.
+cr theero;say Sure, we'll visit orphans and then walk to central square and finally to south crossing.
 cr theero;emote wiggles his bottom.
 say Ok guys, I mean soldiers, lets make a line with three men in row.
 cr men;emote bump into eath other until they form acceptable 3x3 formation.
@@ -28,22 +28,18 @@ cr theero;emote breaths heavily.
 say But its hard work, I ain't cut for this walking thing.
 cr theero;say Let's continue to central square.
 cr central;emote square is full of people, they seem angry.
-cr as;emote patrol arrives, people start to shout at them.
 cr somebody;shout There they are!
 emote shouts "Bandits!" and shakes his fist.
 cr theero;say Whoa, whoa! We ain't no bandits, we are the um.. safety patrol.
 cr somebody;shout You've been killing Arelium citizens every other day.
 cr theero;emote scratches his ear.
 say Well, I don't think it's that often..
-shout Why are you accusing us? Real threat is those god damn ORCS!"
 cr theero;say That did not go well.
 cr lorc;emote orc walks out from the forest.
 emote orc shouts 'I HAVE FRENZY ON TRY TO AVOID ME!'
 cr horc;emote orc says 'Postakaite kripov v lesu.'
 cr theero;say Thiero, did you get that?
 cr horc;emote orc says 'Rasslabtes, vse normalno.'
-cr lorc;emote orc says 'Udachi.'
-cr oarcher;emote archer fires burning arrow that hits Teerhhi in the head.
 cr theero;shout Shit!
 shout I killed three orcs.
 say But, they killed many of our men.
