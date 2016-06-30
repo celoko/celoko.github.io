@@ -9,8 +9,115 @@ var potions = 0;
 var close   = 0;
 var empty   = 0;
 
+var count   = 0;
+
 // Array for all results
 var lines = [];
+
+// 3d array for data
+// db[m][o][h]
+
+var db = new Array(54);
+for (var i = 0; i < 54; i++) {
+    db[i] = new Array(23);
+    for (var j = 0; j < 23; j++) {
+        db[i][j] = new Array(29);
+        for (var k = 0; k < 29; k++) {
+            db[i][j][k] = ' ';  
+        }
+    }
+}
+
+// Took arrays from Ggrs alchtool
+// http://tnsp.org/~ccr/bat/alchtool/
+var  minerals = [
+    "adamantium",   "aluminium",    "anipium",      "batium",   "brass",        "bronze",
+    "cesium",       "chromium",     "cobalt",       "copper",   "darksteel",    "diggalite",
+    "dukonium",     "duraluminium", "durandium",    "electrum", "gold",
+    "graphite",     "hematite",     "highsteel",    "illumium", "indium",       "iridium",
+    "iron",         "kryptonite",   "lead",         "magnesium", "mithril",     "molybdenum",
+    "mowgles",      "mowglite",     "nickel",       "nullium",  "osmium",       "palladium",
+    "pewter",       "platinum",     "potassium",    "pyrite",   "quicksilver", "rhodium",
+    "silicon",      "silver",       "starmetal",    "steel",    "tadmium",      "tin", "titanium",
+    "tormium",      "tungsten",     "uranium",      "vanadium", "zhentorium", "zinc"
+];
+
+var organs = [
+    "antenna", "arm", "beak", "bladder", "brain", "ear", "eye", "foot",
+    "gill", "heart", "horn", "kidney", "leg", "liver", "lung", "nose",
+    "paw", "snout", "spleen", "stomach", "tail", "tendril", "wing"
+];  
+
+var herbs = [
+    [ "apple",       "wormwood" ],       [ "barberry",    "yarrow" ],
+    [ "blueberry",   "wolfbane" ],       [ "burdock",     "chickweed" ],
+    [ "cabbage",     "arnica" ],         [ "carrot",      "thistle" ],
+    [ "cauliflower", "costmary" ],       [ "chicory",     "borage" ],
+    [ "cotton",      "mysticspinach" ],  [ "crystalline", "jaslah" ],
+    [ "elder",       "honeysuckle" ],    [ "foxglove",    "holly" ],
+    [ "garlic",      "nightshade" ],     [ "ginseng",     "mistletoe" ],
+    [ "hemlock",     "tomato" ],         [ "henbane",     "jimsonweed" ],
+    [ "lettuce",     "water_lily" ],     [ "lobelia",     "comfrey" ],
+    [ "mushroom",    "mangrel" ],        [ "onion",       "moss" ],
+    [ "pear",        "boneset" ],        [ "plum",        "sweetflag" ],
+    [ "potato",      "mandrake" ],       [ "raspberry",   "bloodroot" ],
+    [ "rhubarb",     "soapwort" ],       [ "spinach",     "hcliz" ],
+    [ "strawberry",  "mugwort" ],        [ "turnip",      "mysticcarrot" ],
+    [ "vine_seed",   "lungwort"]
+];
+
+function addResult( min, org, herb, result) {
+
+    // Get indexes for ingredients
+    var mi = minerals.indexOf(min);
+    var oi = organs.indexOf(org);
+    var hi = 0;
+
+    // Herb has 2d array
+    for (var x = 0;x < herbs.length;x++) {
+        if (herbs[x][0] == herb || herbs[x][1] == herb ) {
+            hi = x;
+        };
+    }
+
+    //console.log("vars: " + min + " : " + org + ": " + herb + ": " + result);
+    //console.log("add: " + mi + " : " + oi + ": " + hi);
+
+    // If no result, fill mineral and herb with -
+    if (result == "-") {
+        for (var j = 0;j < minerals.length; j++) {
+            db[j][oi][hi] = "-";
+        }
+
+        for (var i = 0;j < herbs.length; i++) {
+            db[mi][oi][i] = "-";
+        }
+    }
+
+    db[mi][oi][hi] = result;
+
+    //console.log("db: " + db[mi][oi][hi]);
+
+}
+
+// Calculate empty cells in array
+function getCount() {
+
+    var count = 0;
+
+    for (var i = 0; i < 54; i++) {
+        for (var j = 0; j < 23; j++) {
+            for (var k = 0; k < 29; k++) {
+                if (db[i][j][k] != " ") {
+                    count++;
+                }  
+            }
+        }
+    }
+   
+    return count;
+}
+
 
 function intoArray(linesTemp){
 
@@ -41,7 +148,9 @@ function getData(){       //this will read file and send information to other fu
 var parseLine = function() {
 
     // Split line by whitespace and try to get last result
-    var result = lines[test].split(/\s+/)[3];
+    var [min, org, her, result] = lines[test].split(/\s+/);
+
+    addResult(min, org, her, result);
 
     var info = "";
 
@@ -70,6 +179,9 @@ function updateStats() {
     document.getElementById("potions").innerHTML = potions;
     document.getElementById("close").innerHTML = close;
     document.getElementById("empty").innerHTML = empty;
+
+    document.getElementById("combos").innerHTML = getCount();        
+
 }
 
 function addLine(info) {
