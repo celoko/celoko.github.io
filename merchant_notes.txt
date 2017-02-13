@@ -6,8 +6,8 @@ con Mandrake
 int H'Cliz
 dex Boneset
 wis Jaslah
-str	Blood Moss
-cha	Mystic Carrot
+str Blood Moss
+cha Mystic Carrot
 
 Modify ammunition
 -----------------
