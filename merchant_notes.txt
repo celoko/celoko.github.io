@@ -1,5 +1,26 @@
 ivory+coral+bone=dragonscale
 
+Pills
+-----
+con Mandrake
+int H'Cliz
+dex Boneset
+wis Jaslah
+str	Blood Moss
+cha	Mystic Carrot
+
+Modify ammunition
+-----------------
+-- horns are sharp and tough, removing all 'special' damage
+
+mana -- crystalline plants are full of magical energy 
+fire -- 'fire' material burns forever
+cold -- 'ice' material is always frozen
+poison -- h'cliz leaves are filled with lethal toxins
+electric -- tungsten material is an electrical power source
+asphyxiation -- death cap toadstools have choking spores
+psionic -- brain juices carry psionic effects
+acid -- stomach acids can eat into flesh
 
 Chest hull desc
 ---------------
@@ -63,8 +84,6 @@ It looks very small yet lethal machine.
 It is an awesome trap but it could be superb.
 It is a superb trap by your standards.
 
-Thanks Ordos
-
 EQ Max cond messages
 --------------------
 awesome     brand new
@@ -76,8 +95,6 @@ good        been fixed a few times
 fine        been fixed several times
 battered    patched up a few times
 poor        patched up several times
-
-Thanks Taras
 
 Gem materials and adjectives
 ----------------------------
@@ -104,6 +121,6 @@ Adjectives:
 9 - flawless
 10 - perfect
 
-Thanks Atheorist?
 
+Thanks Porter, Atheorist, Taras, Ordos
 
