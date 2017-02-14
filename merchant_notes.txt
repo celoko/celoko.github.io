@@ -2,12 +2,12 @@ ivory+coral+bone=dragonscale
 
 Pills
 -----
-con Mandrake
-int H'Cliz
-dex Boneset
-wis Jaslah
-str Blood Moss
-cha Mystic Carrot
+con yellow  Mandrake
+int blue    H'Cliz
+dex magenta Boneset
+wis cyan    Jaslah
+str red     Blood Moss
+cha green   Mystic Carrot
 
 +15 -wacky dust-
 +14 -candy cane-
