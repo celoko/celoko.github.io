@@ -9,6 +9,13 @@ wis Jaslah
 str Blood Moss
 cha Mystic Carrot
 
++15 -wacky dust-
++14 -candy cane-
++13 -space cowboy-
++12 -bubble gum-
++10 -yoda-
+
+
 Modify ammunition
 -----------------
 -- horns are sharp and tough, removing all 'special' damage
