@@ -1,144 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style type="text/css">
-    body {
-        margin: 10px 30%;
-        text-align: center;
-        background-color: #f3ffe6;
-    }
-    
-    #container {
-        width: 100%;
-        font-size: 18px;
-    }
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <style type="text/css">
+        body {
+            max-width: 50em;
+            text-align: center;
+        }
 
-    #scoretable {
-        width: 100%;
-    }
+        p#info {
+            font-weight: bold;
+            height: 1em;
+        }
 
-    table {
-        border-collapse: collapse;
-        text-align: left;
-        width: 100%;
-    }
+        table {
+            border-collapse: collapse;
+            text-align: left;
+            margin: auto;
+        }
 
-    td {
+        table, th, td {
+            border: 1px solid black;
+            padding: 0.2em;
+        }
+
+        td {
+            width: 50%;
+        }
+
+        input[type=range] {
+        -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+        width: 50%; /* Specific width is required for Firefox. */
+        background: transparent; /* Otherwise white in Chrome */
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        }
+
+        input[type=range]:focus {
+        outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+        }
+
+        input[type=range]::-ms-track {
         width: 50%;
-    }
-    
-    p#info {
-        font-weight: bold;
-        height: 1em;
-    }
+        cursor: pointer;
 
-    table, th, td {
-        border: 1px solid black;
-        padding: 0.2em;
-    }
+        /* Hides the slider so custom styles can be added */
+        background: transparent; 
+        border-color: transparent;
+        color: transparent;
+        }
 
+        /* Special styling for WebKit/Blink */
+        input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: 1px solid #000000;
+        height: 20px;
+        width: 10px;
+        border-radius: 3px;
+        background: #ffffff;
+        cursor: pointer;
+        margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+        }
 
-input[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
-}
+        /* All the same stuff for Firefox */
+        input[type=range]::-moz-range-thumb {
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        border: 1px solid #000000;
+        height: 20px;
+        width: 10px;
+        border-radius: 3px;
+        background: #ffffff;
+        cursor: pointer;
+        }
 
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-
-input[type=range]:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-}
-
-input[type=range]::-ms-track {
-  width: 100%;
-  cursor: pointer;
-
-  /* Hides the slider so custom styles can be added */
-  background: transparent; 
-  border-color: transparent;
-  color: transparent;
-}
-
-/* Special styling for WebKit/Blink */
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: 1px solid #000000;
-  height: 20px;
-  width: 10px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
-  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
-}
-
-/* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 20px;
-  width: 10px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
-}
-
-/* All the same stuff for IE */
-input[type=range]::-ms-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 20px;
-  width: 10px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
-}
-
-
+        /* All the same stuff for IE */
+        input[type=range]::-ms-thumb {
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        border: 1px solid #000000;
+        height: 20px;
+        width: 10px;
+        border-radius: 3px;
+        background: #ffffff;
+        cursor: pointer;
+        }
   </style>
-
 
 <meta charset=utf-8 />
 <title>Thela's potion research simulator</title>
 </head>
 <body>
-<div id="divcontainer">
 <H1>Thela's potion research simulator</H1>
 <script src="resplay.js" defer></script>
-<div id="topcontainer">
 <table id="stats">
-<tr>
-    <td>Tests</td>
-    <td id="count"></td>
-</tr>
-    <td>Potions</td>
-    <td id="potions"></td>
-</tr>
-<tr>
-    <td>Close</td>
-    <td id="close"></td>
-</tr>
-<tr>
-    <td>Empty</td>
-    <td id="empty"></td>
-</tr>
-<tr>
-    <td>Combos eliminated</td>
-    <td id="combos"></td>
-</tr>
+    <tr>
+        <td>Tests</td>
+        <td id="count"></td>
+    </tr>
+        <td>Potions</td>
+        <td id="potions"></td>
+    </tr>
+    <tr>
+        <td>Close</td>
+        <td id="close"></td>
+    </tr>
+    <tr>
+        <td>Empty</td>
+        <td id="empty"></td>
+    </tr>
+    <tr>
+        <td>Combos eliminated</td>
+        <td id="combos"></td>
+    </tr>
 </table>
 <p id="info"></p>
-</div>
-
-<textarea id="output" rows="20" cols="100">Tested in Firefox 47</textarea>
+<textarea id="output" rows="20" cols="100">Tested in Firefox 52</textarea>
 <br>
+<label id="speedtext" for="speedrange">Speed</label>
 <input id="speedrange" type="range" min="10" max="3000" value="1000" step="10" align="center" onchange="setSpeed()">
 <button id="pausebutton" onclick="pauseTimer()">Pause</button>
 <button id="startbutton" onclick="startTimer()">Start</button>
-<p id="speedtext"></p>
-</div>
 </body>
 </html>
