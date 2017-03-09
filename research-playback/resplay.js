@@ -1,5 +1,6 @@
-// 1000 ms 
-var speed = 1000;
+// 300 ms 
+var speed = 300;
+var paused = false;
 
 // Global timer
 var timer;
@@ -121,9 +122,14 @@ function getCount() {
 
 function intoArray(linesTemp){
 
-   // splitting all text data into array "\n" is splitting data from each new line
-   //and saving each new line as each element*
-   lines = linesTemp.split('\n'); 
+    function notEmpty(value) {
+        if (value !== "") {
+            return value;
+        }
+    }
+
+    // Split lines into array and remove empty lines
+    lines = linesTemp.split('\n').filter(notEmpty);
 }   
 
 function getData(){       //this will read file and send information to other function
@@ -147,6 +153,13 @@ function getData(){       //this will read file and send information to other fu
 
 var parseLine = function() {
 
+    // Stop execution when we run out of lines
+    if (test >= lines.length - 1) {
+        document.getElementById("info").innerHTML = "Donezo!";
+        stopTimer();
+        return;
+    }
+
     // Split line by whitespace and try to get last result
     var [min, org, her, result] = lines[test].split(/\s+/);
 
@@ -169,8 +182,6 @@ var parseLine = function() {
     }
     updateStats();
     addLine(info);
-
-    interval = setTimeout(parseLine, speed);
 }
 
 function updateStats() {
@@ -198,29 +209,53 @@ function addLine(info) {
     }
 }
 
-function pauseTimer() {
-    document.getElementById("pausebutton").disabled = true;
-    document.getElementById("startbutton").disabled = false;
+function togglePause() {
 
-    clearTimeout(interval);
+    var button = document.getElementById("pausebutton");
+
+    if (!paused) {
+        // Stop timer and change button text
+        button.innerText = "Continue";
+        stopTimer();
+        paused = true;
+    } else {
+        // Start timer and change button text
+        button.innerText = "Pause";
+        startTimer(speed);
+        paused = false;
+    }
 }
 
-function startTimer() {
-    document.getElementById("startbutton").disabled = true;
-    document.getElementById("pausebutton").disabled = false;
+function setSpeed(nspeed) {
 
-    interval = setTimeout(parseLine, speed);
-}
-
-
-function setSpeed() {
-
-    speed = document.getElementById("speedrange").value;
+    if (nspeed == null) {
+        speed = document.getElementById("speedrange").value;
+    } else {
+        speed = nspeed;
+        document.getElementById("speedrange").value = speed;
+    }
     console.log("Change speed to " + speed);
 
-    document.getElementById("speedtext").innerHTML = "Speed: " + speed + "ms";
+    var output = speed + "ms";
+
+    // Show seconds if speed is over 1000 ms
+    if (speed > 1000) {
+        output = speed / 1000 + "s";
+    }
+
+    stopTimer();
+    startTimer(speed);
+
+    document.getElementById("speedtext").innerHTML = "Delay: " + output;
 }
 
+function startTimer(speed) {
+    timer = setInterval(parseLine, speed);
+}
+
+function stopTimer() {
+    clearInterval(timer);
+}
 
 function setup() {
 
@@ -229,15 +264,7 @@ function setup() {
 
     getData();
 
-    setSpeed();
+    setSpeed(speed);
 }
 
 window.onload = setup();
-
-document.getElementById("startbutton").disabled = true;
-document.getElementById("pausebutton").disabled = false;
-
-var interval = setTimeout(parseLine, speed);
-
-
-
