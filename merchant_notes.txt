@@ -11,9 +11,9 @@ cha green   Mystic Carrot
 
 +15 -wacky dust-
 +14 -candy cane-
-+13 -space cowboy-
++13 56min   -space cowboy-
 +12 -bubble gum-
-+10 -yoda-
++10 55min   -yoda-
 +9  -gutter glitter-
 
 
