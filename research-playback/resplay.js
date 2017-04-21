@@ -9,6 +9,11 @@ var test    = 1;
 var potions = 0;
 var close   = 0;
 var empty   = 0;
+var exp     = 0;
+var money   = 0;
+var exp_increase = 0;
+var money_increase = 4000;
+
 
 var count   = 0;
 
@@ -153,6 +158,8 @@ function getData(){       //this will read file and send information to other fu
 
 var parseLine = function() {
 
+
+
     // Stop execution when we run out of lines
     if (test >= lines.length - 1) {
         document.getElementById("info").innerHTML = "Donezo!";
@@ -174,6 +181,13 @@ var parseLine = function() {
         potions++;
         // potion name without first char, !
         info = "Found potion: " + result.substr(1);
+        
+        exp_increase += 750;
+        money_increase += 100;
+
+        exp += exp_increase;
+        money += money_increase;
+
     } else if (result.charAt(0) == "?") {
         close++;
         if (result.length > 1) {
@@ -190,6 +204,8 @@ function updateStats() {
     document.getElementById("potions").innerHTML = potions;
     document.getElementById("close").innerHTML = close;
     document.getElementById("empty").innerHTML = empty;
+    document.getElementById("exp").innerHTML = exp;
+    document.getElementById("gold").innerHTML = money;
 
     document.getElementById("combos").innerHTML = getCount();        
 
