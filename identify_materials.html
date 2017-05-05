@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Identify materials command</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+    #grayblack {
+        color: white;
+        background-color: #272727;
+    }
+
+    .green {
+        color: #00CA00;
+
+    }
+
+  </style>
+<body>
+<H1>Script that lets you search equipment materials</H1>
+
+<p>Are you tired of wasting spell points on identify just to find out what materials equipment is made of?
+Don't you know that appraise shows material info? What?
+<br>
+Anyway, here is script that lets you search equipment materials.</p>
+
+<p>Usage:
+<pre id="grayblack">
+tid torso
+NAME: An evil looking cleaver called 'Torso-fragmenter'  MATS: steel
+NAME: the Torso Maker sword  MATS: laen
+</pre>
+Search matches equipment name(s) and shows name and materials.
+<pre id="grayblack">
+tid JET BLACK
+NAME: A Jet Black Bastard Sword  MATS: adamantium
+NAME: jet black onyx ring  MATS: onyx
+NAME: jet black sleeves  MATS: 20% silk, 80% zhentorium
+NAME: Soul Ripper, the jet black katana  MATS: quicksilver
+NAME: Soul Ripper, the jet black rusty katana  MATS: quicksilver
+</pre>
+<p>Search is case-insensitive, both search pattern and eq name is lowercased before matching.</p>
+<p>Get script from <a href="https://github.com/celoko/batclient_triggers/blob/master/identify_materials.bcs">batclient_triggers</a>, you also need <a href="https://github.com/celoko/batclient_triggers/blob/master/eq.csv">eq data</a> file.
+<b>You need to modify file path in script to where you saved the eq data file.</b></p>
+<p>Equipment data was provided by Nosunrise, <a href="http://batshoppe.dy.fi/index.php">Batshoppe</a>. You can add more equipment info to his service.</p>
+
+
+
+
+</body>
+</html>
