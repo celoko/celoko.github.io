@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vote script</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+    #grayblack {
+        color: white;
+        background-color: #272727;
+    }
+
+    .green {
+        color: #00CA00;
+
+    }
+
+  </style>
+<body>
+<H1>Script that lets you vote for Batmud in topmudsites</H1>
+<p>One day some dude said: "maksan 10m jos joku koodaa clienttiin semmosen vote nappulan joka aukee pienena ylakulmaan ainaku voi votee ja katoaa ku sita painaa :)",
+this script is not quite like that, because I don't like buttons and ui stuff seems complicated, but atleast it allows you to vote quickly from client.
+<br>
+Oh and it only works on topmudsites, because I did not have time to play with mudconnector yet.</p>
+
+<p>Usage:
+First you need to enable voting by typing 'voted' or 'voted reset', if it returns 'Thank you for voting and supporting BatMUD! You may vote again in 12 hours.',
+you can vote by typing 'vote'.
+<br>
+This is to make sure you don't vote too often.
+</p>
+<pre id="grayblack">
+    >voted
+    Voting not enabled, type 'voted' or 'voted reset'
+    It has not yet been 12 hours, you must wait 11h, 52min and 58s or use 'voted reset'.
+    
+    >voted reset
+    Type 'vote' to vote for Batmud on TMS.
+    Thank you for voting and supporting BatMUD! You may vote again in 12 hours.
+    
+    >vote
+    Voting for Batmud in TMS
+    
+    Sending 'POST' request to URL : http://www.topmudsites.com/vote.php
+    Post parameters : do=in&oldhash=81512b091bc6f9a763b3746de24803c3&test=1afd663289977b4d521c9c56ecc7387b&mudid=253516&votehash=81512b091bc6f9a763b3746de24803c3
+    Response Code : 200 
+</pre>
+<p>Now, I don't know if it really works, because TMS doesn't give any info whether voting was successful and they do it on purpose to discourage hackers.</p>
+
+<H2>What does the script do?</H2>
+<p>If we take a look at http://www.topmudsites.com/vote-batmud.html source, we notice that it has button that sends post request to http://www.topmudsites.com/vote.php</p>
+<pre>
+    <code>
+        &lt;form name="click" action="http://www.topmudsites.com/vote.php" method="POST"&gt;
+        &lt;input type="hidden" name="do" value="in"&gt;
+        &lt;input name="oldhash" type="hidden" value="f347aa36741c115e9f1b66855e30d148"&gt;
+        &lt;input name="test" type="hidden" value="b4502044ef1d79f55b2781e21a0628c6"&gt;
+        &lt;input type="hidden" name="mudid" value="253516"&gt;
+        &lt;input type="hidden" name="votehash" value="f347aa36741c115e9f1b66855e30d148"&gt;
+        ..
+    </code>
+</pre>
+<p>Script grabs those parameters and sends a post request to vote.php. Boom. Voted. Maybe.</p>
+
+<p>Get script from <a href="https://github.com/celoko/batclient_triggers/blob/master/vote_script.bcs">batclient_triggers</a>. You should probably examine it before using.</p>
+
+</body>
+</html>
