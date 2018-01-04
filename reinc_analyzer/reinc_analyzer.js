@@ -15,23 +15,40 @@ function loadFile() {
 
 function parseFile(file) {
     var reader = new FileReader();
-    var result;
 
     reader.onload = function(event){
         
-        result = JSON.parse(event.target.result);
-
-        var popularGuilds = mostPopularGuild(result);
-        var popularWeekday = mostPopularWeekday(result);
-
-        addListNameCount("Most popular guilds", popularGuilds);
-        addListNameCount("Most popular weekday", popularWeekday);
-
+        var result = JSON.parse(event.target.result);
+        processData(result);
     };
     reader.readAsText(file);
+}
 
+function processData(result){
+    var popularGuilds = mostPopularGuild(result);
+    var popularWeekday = mostPopularWeekday(result);
 
-    //output.value = result;
+    addListNameCount("Most popular guilds", popularGuilds);
+    addListNameCount("Most popular weekday", popularWeekday);
+};
+
+function readLocalData(){       //this will read file and send information to other function
+
+    var xmlhttp;
+    if(window.XMLHttpRequest){
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.onreadystatechange = function(){
+        if(xmlhttp.readyState == 4){
+            var result = JSON.parse(xmlhttp.responseText);
+            processData(result);
+        }
+    }
+      xmlhttp.open("GET", "bat_reinc_data_1.json", true);
+      xmlhttp.send();
 }
 
 /*
@@ -48,7 +65,6 @@ shortest reinc
 most exp made
 least exp made
 */
-
 
 // When given title and array of objects {"name": name, "count": count}
 // Adds new list to site
