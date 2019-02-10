@@ -1,0 +1,97 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nergal evolution tree navigation helper</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+    #grayblack {
+        color: white;
+        background-color: #272727;
+    }
+
+    .green {
+        color: #00CA00;
+
+    }
+
+  </style>
+<body>
+<H1>Nergal evolution tree navigation helper</H1>
+
+<p>I'm not even gonna say anything, Nergal evolution tree is pain in the ass to navigate,
+    so I wrote down coordinates for each node and made script to move directly into them.</p>
+
+<p>Usage:
+    <br>
+    neh help - to see help
+    <pre id="grayblack">
+Nergal evolution tree helper
+
+neh list disease/minion/stats - to see list of bonuses
+
+neh &lt;path&gt;&lt;node&gt; - to move to certain node, d disease, m minion, s stats
+neh d2 - moves to second node on disease path
+
+Show details after move: true
+Show view after move: false
+
+You can toggle autoDetails and autoView in script.
+    </pre>
+<br>
+    neh list disease/minion/stats - to see list of bonuses
+<pre id="grayblack">
+neh list disease
+Disease
+1 Prolonging inevitable	        diseases gain 1% extra duration upon infection
+2 Amplified viruses #2	        diseases gain 2% extra potency based on evolution rep
+3 Swift contagiousness #1       disease have extra 3% chance to infect victim upon hit
+4 Prolonging inevitable #2	diseases gain 1% extra duration upon infection
+5 Virulent Infection		Upon infection your diseases gain 30% increased effect
+6 Swift contagiousness #2	diseases have extra 3% chance to infect victim upon hit
+7 Amplified viruses #1	        diseases gain 2% extra potency based on your evolution reputation
+8 Prolonging inevitable #4	diseases gain 1% extra duration upon infection
+9 Disease carrier               Increase number maximum number of diseases on target by 1
+10 Lasting impression	        Upon infection disease gain +30% duration
+11 Prolonging inevitable #3	diseases gain 1% extra duration upon infection
+12 Amplified viruses #3	        diseases gain 2% extra potency based on your evolution reputation
+13 Swift contagiousness #3	diseases have extra 3% chance to infect victim upon hit
+14 Patient zero		        You become immune to all curses and diseases
+15 Amplified viruses #4	        diseases gain 2% extra potency based on your evolution reputation
+16 Swift contagiousness #5	diseases have extra 3% chance to infect victim upon hit
+17 Swift contagiousness #4	diseases have extra 3% chance to infect victim upon hit
+18 Prolonging inevitable #5	diseases gain 1% extra duration upon infection
+19 Plaguebearer		        Increase number maximum number of diseases on target by 1        
+20 Compromised immune system	Combined effect of diseases lowers resistances on monster
+21 Vigorous contagion	        Minions gain chance to inflict disease while casting spell
+</pre>
+    neh &lt;path&gt;&lt;node&gt; - move to certain node on path
+
+<pre id="grayblack">
+neh m27
+.                                     .."""                                     
+_.                     :        .....                                           
+ "::     ...  ""  ::___:_.. __:.                                                
+  "###___:::::""""              ""...                                           
+ "#:::....""                         "__:....                                   
+ ##::"""                                                                        
+ ##:""  Name                                                                    
+ #::"     Claws of spiked bone                                                            
+ #::".  Description                                                             
+##::".    Disease mutates limbs of your minions to form of
+##::".    claws with spikes made of bone. Inflicting greater
+##::".    pain on impact.                                                                                                           
+ ##::". Short                                                                   
+ #::".    Transforms limbs to claws and increases damage                                                           
+ #::".  Status                                                                  
+ #::".    Obtainable                                                          
+::....__                                                                        
+     :""__"""______"""     
+</pre>
+<p>Details after move is on by default, but you can toggle it in script.</p>
+<p>Get the script from <a href="https://github.com/celoko/batclient_triggers/blob/master/nergal_evo_helper.bcs">batclient_triggers</a></p>
+<p>Thanks to Tazliel and Marvin.
+
+</body>
+</html>
