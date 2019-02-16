@@ -14,14 +14,12 @@ var money   = 0;
 var exp_increase = 0;
 var money_increase = 4000;
 
-
 var count   = 0;
 
 // Array for all results
 var lines = [];
 
-// 3d array for data
-// db[m][o][h]
+
 
 var db = new Array(54);
 for (var i = 0; i < 54; i++) {
@@ -71,6 +69,48 @@ var herbs = [
     [ "strawberry",  "mugwort" ],        [ "turnip",      "mysticcarrot" ],
     [ "vine_seed",   "lungwort"]
 ];
+
+function start() {
+    // 300 ms 
+    speed = 300;
+    paused = false;
+
+    test    = 1;
+    potions = 0;
+    close   = 0;
+    empty   = 0;
+    exp     = 0;
+    money   = 0;
+    exp_increase = 0;
+    money_increase = 4000;
+
+    count   = 0;
+
+    // Array for all results
+    lines = [];
+
+    // 3d array for data
+    // db[m][o][h]
+    db = new Array(54);
+    for (var i = 0; i < 54; i++) {
+        db[i] = new Array(23);
+        for (var j = 0; j < 23; j++) {
+            db[i][j] = new Array(29);
+            for (var k = 0; k < 29; k++) {
+                db[i][j][k] = ' ';  
+            }
+        }
+    }
+
+    // Clear textarea
+    document.getElementById("output").value = "";
+
+    selectData();
+
+    getData(filename);
+
+    setSpeed();
+}
 
 function addResult( min, org, herb, result) {
 
@@ -137,7 +177,7 @@ function intoArray(linesTemp){
     lines = linesTemp.split('\n').filter(notEmpty);
 }   
 
-function getData(){       //this will read file and send information to other function
+function getData(filename){       //this will read file and send information to other function
 
        var xmlhttp;
        if(window.XMLHttpRequest){
@@ -152,13 +192,11 @@ function getData(){       //this will read file and send information to other fu
              intoArray(linesTemp);
            }
        }
-         xmlhttp.open("GET", "results.txt", true);
+         xmlhttp.open("GET", filename, true);
          xmlhttp.send();
 }
 
 var parseLine = function() {
-
-
 
     // Stop execution when we run out of lines
     if (test >= lines.length - 1) {
@@ -208,7 +246,6 @@ function updateStats() {
     document.getElementById("gold").innerHTML = money;
 
     document.getElementById("combos").innerHTML = getCount();        
-
 }
 
 function addLine(info) {
@@ -242,27 +279,32 @@ function togglePause() {
     }
 }
 
-function setSpeed(nspeed) {
+function setSpeed() {
 
-    if (nspeed == null) {
-        speed = document.getElementById("speedrange").value;
-    } else {
-        speed = nspeed;
-        document.getElementById("speedrange").value = speed;
-    }
+    speed = document.getElementById("speedrange").value;
+    
     console.log("Change speed to " + speed);
 
     var output = speed + "ms";
 
-    // Show seconds if speed is over 1000 ms
-    if (speed > 1000) {
-        output = speed / 1000 + "s";
+    // Don't start timer if pause is on
+    if (!paused) {
+        stopTimer();
+        startTimer(speed);
     }
 
-    stopTimer();
-    startTimer(speed);
-
     document.getElementById("speedtext").innerHTML = "Delay: " + output;
+}
+
+function selectData() {
+
+    let selected = document.getElementById("dataselect").value;
+
+    if (selected == "thela") {
+        filename = "results_thela.txt";
+    } else if (selected == "erygon") {
+        filename = "results_erygon.txt";
+    }
 }
 
 function startTimer(speed) {
@@ -275,12 +317,14 @@ function stopTimer() {
 
 function setup() {
 
-    // Clear textarea
-    document.getElementById("output").value = "";
+    // Event listener for speed range 
+    document.getElementById("speedrange").addEventListener("input", setSpeed, false);
 
-    getData();
+    // Event listeners for buttons
+    document.getElementById("pausebutton").addEventListener("click", togglePause, false);
+    document.getElementById("loadbutton").addEventListener("click", start, false);
 
-    setSpeed(speed);
+    start();
 }
 
 window.onload = setup();
