@@ -1,5 +1,5 @@
 var lines = [];
-var filename = "https://celoko.github.io/viisusearch/001.csv"
+var filename = "001.csv"
 
 var v001 = new Array();
 v001.push({viisu: "Rogevisut ilman sääntöjöä vol1 Coverit", vnr:"1", snr:"1", name:"Päivi Räsänen Sateenkaaren tuolla puolen"});
